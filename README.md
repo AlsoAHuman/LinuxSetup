@@ -8,11 +8,11 @@ sudo apt install nala -y
 
 sudo nala upgrade -y
 
-sudo nala install vlc
+sudo nala install vlc -y
 
-sudo nala install blender
+sudo nala install blender -y
 
-sudo nala purge firefox
+sudo nala purge firefox -y
 
 sudo nala install -y wget gnupg lsb-release apt-transport-https ca-certificates
 
