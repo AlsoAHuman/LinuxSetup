@@ -42,8 +42,6 @@ Setting up Debian Linux desktop with KDE. Not really much, just what I'll usuall
     
     flatpak install flathub io.freetubeapp.FreeTube
     
-    sudo nala-get install fastfetch -y
-    
     sudo add-apt-repository ppa:phoerious/keepassxc
     
     sudo nala update
