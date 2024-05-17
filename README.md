@@ -46,4 +46,4 @@ Setting up Debian Linux desktop with KDE. Not really much, just what I'll usuall
     
     sudo nala update
     
-    sudo nala install keepassxc
+    sudo nala install keepassxc -y
