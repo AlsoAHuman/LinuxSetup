@@ -1,7 +1,6 @@
 # My-Linux-Setup
 Setting up Debian Linux desktop with KDE. Not really much, just what I'll usually install. If you have any reccomendations or something feel free to suggest a change. 
 
-
 sudo apt update
 
 sudo apt install nala -y
@@ -34,4 +33,18 @@ sudo nala update
 
 sudo nala install librewolf -y
 
+sudo nala install flatpak -y
+
+sudo nala install plasma-discover-backend-flatpak -y
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub io.freetubeapp.FreeTube
+
 sudo nala-get install fastfetch -y
+
+sudo add-apt-repository ppa:phoerious/keepassxc
+
+sudo nala update
+
+sudo nala install keepassxc
