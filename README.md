@@ -6,6 +6,8 @@ Setting up Debian Linux desktop with KDE. Not really much, just what I'll usuall
     sudo apt install nala -y
     
     sudo nala upgrade -y
+
+    sudo nala install htop -y
     
     sudo nala install vlc -y
     
