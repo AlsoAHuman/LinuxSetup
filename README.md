@@ -1,5 +1,5 @@
 # My-Linux-Setup
-Setting up Debian Linux desktop with KDE
+Setting up Debian Linux desktop with KDE. Not really much, just what I'll usually install. If you have any reccomendations or something feel free to suggest a change. 
 
 
 sudo apt update
