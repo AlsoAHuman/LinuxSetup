@@ -33,3 +33,5 @@ EOF
 sudo nala update
 
 sudo nala install librewolf -y
+
+sudo nala-get install fastfetch -y
