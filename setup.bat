@@ -29,3 +29,21 @@ flatpak install flathub io.freetubeapp.FreeTube
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo nala update
 sudo nala install keepassxc -y
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
