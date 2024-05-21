@@ -32,4 +32,4 @@ Setting up Debian Linux desktop with KDE. Not really much, just what I'll usuall
     sudo add-apt-repository ppa:phoerious/keepassxc
     sudo nala update
     sudo nala install keepassxc -y
-    sudo nala install neovim
+    sudo nala install neovim -y
