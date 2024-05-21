@@ -25,12 +25,12 @@ sudo nala install librewolf -y
 sudo nala install flatpak -y
 sudo nala install plasma-discover-backend-flatpak -y
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-flatpak install flathub io.freetubeapp.FreeTube
+flatpak install flathub io.freetubeapp.FreeTube -y
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo nala update
 sudo nala install keepassxc -y
 sudo nala install neovim -y
-
+flatpak install flathub com.usebottles.bottles -y
 
 
 
