@@ -6,4 +6,4 @@ Components: main
 Architectures: amd64
 Signed-By: /usr/share/keyrings/librewolf.gpg
 EOF
-sudo add-apt-repository ppa:phoerious/keepassxc & flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && sudo nala upgrade -y && sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc & sudo nala purge firefox -y && flatpak install flathub io.freetubeapp.FreeTube -y && flatpak install flathub com.usebottles.bottles -y & sudo nala purge firefox -y
+sudo add-apt-repository ppa:phoerious/keepassxc & flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo && sudo nala upgrade -y && sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc & sudo nala purge firefox -y && flatpak install flathub io.freetubeapp.FreeTube -y && flatpak install flathub com.usebottles.bottles -y
