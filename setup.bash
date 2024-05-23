@@ -17,13 +17,14 @@ sudo add-apt-repository ppa:phoerious/keepassxc
 flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
 sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
+sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
 
 # Installing Apps 
-# Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN) 
-# Via Flatpak - (Freetube, Bottles) 
-# Removes - (Firefox) 
 sudo nala upgrade -y
-sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop
-sudo nala purge firefox -y
+# Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch) 
+sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch -y
+# Via Flatpak - (Freetube, Bottles) 
 flatpak install flathub io.freetubeapp.FreeTube -y
 flatpak install flathub com.usebottles.bottles -y
+# Removes - (Firefox) 
+sudo nala purge firefox -y
