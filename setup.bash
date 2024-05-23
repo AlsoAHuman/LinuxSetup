@@ -13,9 +13,9 @@ EOF
 sudo add-apt-repository ppa:phoerious/keepassxc & flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
 
 # Installing Apps 
-#  Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc) 
-#  Via Flatpak - (Freetube, Bottles) 
-#  Removes - (Firefox) 
+# Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc) 
+# Via Flatpak - (Freetube, Bottles) 
+# Removes - (Firefox) 
 sudo nala upgrade -y && sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc & sudo nala purge firefox -y && flatpak install flathub io.freetubeapp.FreeTube -y && flatpak install flathub com.usebottles.bottles -y
 
 
