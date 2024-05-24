@@ -35,9 +35,11 @@
     # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch) 
         sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch -y
    
-    # Via Flatpak - (Freetube, Bottles) 
+    # Via Flatpak - (Freetube, Bottles, GIMP, Podman GUI) 
         flatpak install flathub io.freetubeapp.FreeTube -y
         flatpak install flathub com.usebottles.bottles -y
+        flatpak install flathub org.gimp.GIMP -y
+        flatpak install flathub io.podman_desktop.PodmanDesktop -y
     
     # Removes - (Firefox) 
         sudo nala purge firefox -y
