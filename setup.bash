@@ -43,3 +43,8 @@
     
     # Removes - (Firefox) 
         sudo nala purge firefox -y
+
+# Scripts Setup
+    # Replaces Apt With Nala When Applicable
+        bash scripts/usenala
+        
