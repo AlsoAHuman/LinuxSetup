@@ -46,5 +46,5 @@
 
 # Scripts Setup
     # Replaces Apt With Nala When Applicable
-        bash scripts/usenala
+        bash usenala
         
