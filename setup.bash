@@ -35,6 +35,9 @@
     # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch, KVM/QEMU) 
         sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager -y
    
+    # Via Curl - (Superfile)
+        bash -c "$(curl -sLo- https://raw.githubusercontent.com/yorukot/superfile/main/install.sh)"
+    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman GUI) 
         flatpak install flathub io.freetubeapp.FreeTube -y
         flatpak install flathub com.usebottles.bottles -y
