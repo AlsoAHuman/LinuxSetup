@@ -32,8 +32,8 @@
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch, KVM/QEMU, Ranger, ADB) 
-        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb -y
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch, KVM/QEMU, Ranger, ADB, Curl) 
+        sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb curl
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman GUI) 
         flatpak install flathub io.freetubeapp.FreeTube -y
