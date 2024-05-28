@@ -12,7 +12,7 @@
 
 # Additional Repositories Added
 
-    #librewolf repo
+    # Librewolf Repo
         distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then lsb_release -sc; else echo focal; fi) && wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg && sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
         Types: deb
         URIs: https://deb.librewolf.net
@@ -22,17 +22,17 @@
         Signed-By: /usr/share/keyrings/librewolf.gpg
         EOF
     
-    #keepassxc repo
+    # Keepassxc Repo
         sudo add-apt-repository ppa:phoerious/keepassxc
     
-    #flatpak repo
+    # Flatpak Repo
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
     
-    #protonvpn repo
+    # Protonvpn Repo
         wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
         sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
 
-    #vscodium repo
+    # Vscodium Repo
         wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
             | gpg --dearmor \
             | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
