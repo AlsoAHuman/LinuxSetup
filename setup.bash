@@ -26,14 +26,11 @@
         wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
         sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
     
-    #fastfetch
-        sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Fastfetch, KVM/QEMU, Ranger, ADB, Curl) 
-        sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop fashfetch qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb curl
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, KVM/QEMU, Ranger, ADB, Curl) 
+        sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb curl
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman GUI) 
         flatpak install flathub io.freetubeapp.FreeTube -y
