@@ -7,16 +7,15 @@
 # Adding Nala and Items Needed For Adding Repositories
     sudo apt update
     sudo apt install nala -y
+    sudo nala fetch --auto --fetches 3 -y
     sudo nala upgrade -y
-    sudo nala install -y wget gnupg lsb-release apt-transport-https ca-certificates
+    sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
 
 # Additional Repositories Added
 
     # Librewolf Repo
         distro=$(if echo " una bookworm vanessa focal jammy bullseye vera uma " | grep -q " $(lsb_release -sc) "; then lsb_release -sc; else echo focal; fi)
-        
         wget -O- https://deb.librewolf.net/keyring.gpg | sudo gpg --dearmor -o /usr/share/keyrings/librewolf.gpg
-        
         sudo tee /etc/apt/sources.list.d/librewolf.sources << EOF > /dev/null
         Types: deb
         URIs: https://deb.librewolf.net
@@ -47,13 +46,16 @@
     sudo nala upgrade -y
     
     # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, KVM/QEMU, Ranger, ADB, Curl, Codium) 
-        sudo nala install -y blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb curl codium
+        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virtinst libvirt-daemon virt-manager ranger adb curl codium -y
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman GUI) 
         flatpak install flathub io.freetubeapp.FreeTube -y
         flatpak install flathub com.usebottles.bottles -y
         flatpak install flathub org.gimp.GIMP -y
         flatpak install flathub io.podman_desktop.PodmanDesktop -y
+
+    # Via Curl - (Bun)
+        curl -fsSL https://bun.sh/install | bash
     
     # Removes - (Firefox) 
         sudo nala purge firefox -y
