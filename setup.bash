@@ -45,13 +45,14 @@
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman GUI) 
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman) 
         sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman -y
    
-    # Via Flatpak - (Freetube, Bottles, GIMP) 
+    # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
         sudo flatpak install flathub io.freetubeapp.FreeTube -y
         sudo flatpak install flathub com.usebottles.bottles -y
         sudo flatpak install flathub org.gimp.GIMP -y
+        sudo flatpak install flathub io.podman_desktop.PodmanDesktop -y
 
     # Via Curl - (Bun)
         curl -fsSL https://bun.sh/install | bash
