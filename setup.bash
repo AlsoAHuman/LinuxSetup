@@ -7,7 +7,7 @@
 # Adding Nala and Items Needed For Adding Repositories
     sudo apt update
     sudo apt install nala -y
-    sudo nala fetch --auto --fetches 3 -y
+    sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
     sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
 
