@@ -1,0 +1,7 @@
+alias weather='curl wttr.in/$LOCATION'
+alias aliases='nano ~/.bash_aliases'
+alias c='clear'
+alias q='exit'
+alias e='exit'
+alias Upgradeall='sudo nala upgrade -y && flatpak update -y'
+alias neofetch='fastfetch'
