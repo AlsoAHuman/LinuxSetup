@@ -3,4 +3,4 @@ Setting up Debian Linux desktop with KDE. Not really much, just what I'll usuall
 
             git clone https://github.com/AlsoAHuman/My-Linux-Setup
             cd my-linux-setup
-            sudo ./setup.bash
+            sudo bash ./setup.bash
