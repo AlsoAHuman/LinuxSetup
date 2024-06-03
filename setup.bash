@@ -57,6 +57,9 @@
     # Via Curl - (Bun, Rust)
         curl -fsSL https://bun.sh/install | bash
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+    # Via W-get - (Superfile)
+        bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
     
     # Removes - (Firefox) 
         sudo nala purge firefox -y
