@@ -9,7 +9,7 @@
     sudo apt install nala -y
     sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
-    sudo nala install software-properties-common wget gnupg lsb-release apt-transport-https ca-certificates -y
+    sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
 
 # Additional Repositories Added
 
@@ -35,9 +35,6 @@
         wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
         sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
 
-    # Fastfetch Repo
-        sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
-        
     # Vscodium Repo
         wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
             | gpg --dearmor \
@@ -48,8 +45,8 @@
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive, Fastfetch) 
-        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive fastfetch -y
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive) 
+        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive -y
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
         sudo flatpak install flathub io.freetubeapp.FreeTube -y
