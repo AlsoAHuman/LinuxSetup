@@ -54,8 +54,9 @@
         sudo flatpak install flathub org.gimp.GIMP -y
         sudo flatpak install flathub io.podman_desktop.PodmanDesktop -y
 
-    # Via Curl - (Bun)
+    # Via Curl - (Bun, Rust)
         curl -fsSL https://bun.sh/install | bash
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
     
     # Removes - (Firefox) 
         sudo nala purge firefox -y
