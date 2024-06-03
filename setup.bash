@@ -9,7 +9,7 @@
     sudo apt install nala -y
     sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
-    sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
+    sudo nala install wget software-properties-common gnupg lsb-release apt-transport-https ca-certificates -y
 
 # Additional Repositories Added
 
@@ -33,11 +33,14 @@
         echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
             | sudo tee /etc/apt/sources.list.d/vscodium.list
     
+    # Fastfetch Repo
+        sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+    
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive) 
-        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive -y
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive, Fastfetch) 
+        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive fastfetch -y
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
         sudo flatpak install flathub io.freetubeapp.FreeTube -y
@@ -56,3 +59,8 @@
         sudo nala purge firefox -y
 
 # Scripts Setup
+
+# Clean Up
+    clear
+    fastfetch
+    echo "This program has install nala, a custom media suite, librewolf, bun, rust, and some command line goodies."
