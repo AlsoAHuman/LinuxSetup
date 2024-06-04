@@ -14,7 +14,7 @@
 # Additional Repositories Added
 
     # Librewolf Repo
-        sudo bash ./LibrewolfRepo.bash
+        sudo bash ./Repos_List/LibrewolfRepo.bash
     
     # Flatpak Repo
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
