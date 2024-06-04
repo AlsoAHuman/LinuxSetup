@@ -57,4 +57,4 @@
 # Clean Up
     clear
     fastfetch
-    echo "This program has install nala, a custom media suite, librewolf, bun, rust, and some command line goodies."
+    echo "This program has installed nala, a custom media suite, librewolf, bun, rust, and some command line goodies."
