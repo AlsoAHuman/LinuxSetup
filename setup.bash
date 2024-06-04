@@ -53,6 +53,7 @@
         sudo nala purge firefox -y
 
 # Scripts Setup
+    sudo bash Scripts_List/usenala
 
 # Clean Up
     clear
