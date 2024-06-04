@@ -9,12 +9,12 @@
     sudo apt install nala -y
     sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
-    sudo nala install wget software-properties-common gnupg lsb-release apt-transport-https ca-certificates -y
+    sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
 
 # Additional Repositories Added
 
     # Librewolf Repo
-        sudo bash ./librewolfRepo.bash
+        sudo bash ./LibrewolfRepo.bash
     
     # Flatpak Repo
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
