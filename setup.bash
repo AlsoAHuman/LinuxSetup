@@ -17,10 +17,7 @@
 
     # Librewolf Repo
         sudo bash ./Repos_List/LibrewolfRepo.bash
-    
-    # Flatpak Repo
-        flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-    
+      
     # Protonvpn Repo
         wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
         sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
@@ -39,6 +36,7 @@
         sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive -y
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
+        flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
         sudo flatpak install flathub io.freetubeapp.FreeTube -y
         sudo flatpak install flathub com.usebottles.bottles -y
         sudo flatpak install flathub org.gimp.GIMP -y
