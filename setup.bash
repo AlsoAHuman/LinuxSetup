@@ -12,6 +12,10 @@
     sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
     sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
+    sudo nala install ffmpeg libsdl2-2.0-0 adb wget \
+                 gcc git pkg-config meson ninja-build libsdl2-dev \
+                 libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev \
+                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
 
 # Additional Repositories Added
 
@@ -41,6 +45,12 @@
         sudo flatpak install flathub com.usebottles.bottles -y
         sudo flatpak install flathub org.gimp.GIMP -y
         sudo flatpak install flathub io.podman_desktop.PodmanDesktop -y
+
+    # Via Git Clone - (Scrcpy)
+        git clone https://github.com/Genymobile/scrcpy
+        cd scrcpy
+        ./install_release.sh
+        cd
 
     # Via Curl - (Bun, Rust)
         curl -fsSL https://bun.sh/install | bash
