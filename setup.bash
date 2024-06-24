@@ -41,10 +41,10 @@
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-        sudo flatpak install flathub io.freetubeapp.FreeTube -y
-        sudo flatpak install flathub com.usebottles.bottles -y
-        sudo flatpak install flathub org.gimp.GIMP -y
-        sudo flatpak install flathub io.podman_desktop.PodmanDesktop -y
+        flatpak install flathub io.freetubeapp.FreeTube -y
+        flatpak install flathub com.usebottles.bottles -y
+        flatpak install flathub org.gimp.GIMP -y
+        flatpak install flathub io.podman_desktop.PodmanDesktop -y
 
     # Via Git Clone - (Scrcpy)
         git clone https://github.com/Genymobile/scrcpy
