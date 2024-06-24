@@ -11,11 +11,7 @@
     sudo apt install nala -y
     sudo nala fetch --auto --fetches 4 -y
     sudo nala upgrade -y
-    sudo nala install wget gnupg lsb-release apt-transport-https ca-certificates -y
-    sudo nala install ffmpeg libsdl2-2.0-0 adb wget \
-                 gcc git pkg-config meson ninja-build libsdl2-dev \
-                 libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev \
-                 libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
+    sudo nala install wget git gnupg lsb-release apt-transport-https ca-certificates -y
 
 # Additional Repositories Added
 
@@ -36,8 +32,8 @@
 # Installing Apps 
     sudo nala upgrade -y
     
-    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive) 
-        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive -y
+    # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive, ffempeg, ADB) 
+        sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim librewolf keepassxc proton-vpn-gnome-desktop ranger adb curl codium podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 adb gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
    
     # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
         flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
