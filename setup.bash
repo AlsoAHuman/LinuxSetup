@@ -38,6 +38,8 @@
 
         # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Librewolf, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive, ffempeg, ADB) 
             sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger adb curl podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 adb gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
+            
+        # Via Script Execution - (Librewolf, Codium, Proton-Vpn-Gnome-Desktop)
             sudo nala install codium librewolf proton-vpn-gnome-desktop -y
 
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
