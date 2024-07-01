@@ -36,9 +36,6 @@
         # Via Nala - (Blender, VLC, Htop, Flatpak, Plasma Discover Flatpak, Neovim, Keepassxc, Proton VPN, Ranger, ADB, Curl, Codium, Podman, Libreoffice, Kdenlive, ffempeg) 
             sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger adb curl podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 adb gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev librewolf -y
             
-        # Via Internal Script Execution - (Codium, Proton-Vpn-Gnome-Desktop)
-            sudo nala install codium proton-vpn-gnome-desktop -y
-
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop) 
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
             flatpak install flathub io.freetubeapp.FreeTube -y
