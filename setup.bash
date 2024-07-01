@@ -64,5 +64,6 @@
         sudo bash Scripts_List/usenala
 
     # Clean Up
+        cd
         clear
         echo "This program has installed nala, a custom media suite, librewolf, bun, rust, and some command line goodies."
