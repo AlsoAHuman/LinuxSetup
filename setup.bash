@@ -48,7 +48,7 @@
             cd scrcpy
             ./install_release.sh
             cd
-            sudo bash Scripts_List/Librewolf.bash
+            sudo bash ./Scripts_List/Librewolf.bash
 
         # Via Curl - (Bun, Rust)
             curl -fsSL https://bun.sh/install | bash
