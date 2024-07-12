@@ -55,8 +55,10 @@
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
             curl -fsSL https://ollama.com/install.sh | sh
 
-        # Via W-get - (Superfile)
+        # Via W-get - (Superfile, Fastfetch)
             bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
+            wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.18.1/fastfetch-linux-amd64.deb
+            sudo dpkg -i fastfetch-linux-amd64.deb
 
         # Removes - (Firefox) 
             sudo nala purge firefox -y
