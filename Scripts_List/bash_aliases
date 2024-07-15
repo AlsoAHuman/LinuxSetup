@@ -1,7 +1,3 @@
-alias weather='curl wttr.in/$Location'
-alias aliases='nano ~/.bash_aliases'
-alias neofetch='fastfetch'
-
 # Clear and Exit
         alias c='clear && fastfetch'
         alias c-a='clear'
@@ -18,3 +14,8 @@ alias neofetch='fastfetch'
         alias f="find . | grep "
         alias p="ps aux | grep "
         alias h="history | grep "
+
+# Unlabled
+        alias weather='curl wttr.in/$Location'
+        alias aliases='nano ~/.bash_aliases'
+        alias neofetch='fastfetch'
