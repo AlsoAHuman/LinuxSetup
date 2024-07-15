@@ -1,9 +1,24 @@
 alias weather='curl wttr.in/$Location'
 alias aliases='nano ~/.bash_aliases'
-alias c='clear && fastfetch'
-alias c-a='clear'
-alias q='exit'
-alias e='exit'
-alias Upgradeall='sudo nala upgrade -y && sudo flatpak update -y'
 alias neofetch='fastfetch'
-alias cat='bat'
+
+# Clear and Exit
+        alias c='clear && fastfetch'
+        alias c-a='clear'
+        alias q='exit'
+        alias e='exit'
+
+# Updating
+        alias Upgradeall='sudo nala upgrade -y && sudo flatpak update -y'
+
+# Count all files (recursively) in the current folder
+        alias countfiles="for t in files links directories; do echo \`find . -type \${t:0:1} | wc -l\` \$t; done 2> /dev/null"
+
+# Search files in the current folder
+        alias f="find . | grep "
+
+# Search running processes
+        alias p="ps aux | grep "
+
+# Search command line history
+        alias h="history | grep "
