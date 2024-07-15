@@ -23,6 +23,9 @@
             wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
             sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
 
+        # Fastfetch Repo
+            FASTFETCH_URL=$(curl -s https://api.github.com/repos/fastfetch-cli/fastfetch/releases/latest | grep "browser_download_url.*linux-amd64.deb" | cut -d '"' -f 4)
+        
         # Vscodium Repo
             wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
                 | gpg --dearmor \
@@ -51,16 +54,16 @@
             cd
             sudo bash Librewolf.bash
 
-        # Via Curl - (Bun, Rust, Ollama)
+        # Via Curl - (Bun, Rust, Ollama, Fastfetch)
             curl -fsSL https://bun.sh/install | bash
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
             curl -fsSL https://ollama.com/install.sh | sh
-
-        # Via W-get - (Superfile, Fastfetch)
+            curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
+            sudo apt-get install /tmp/fastfetch_latest_amd64.deb
+            
+        # Via W-get - (Superfile)
             bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
-            wget https://github.com/fastfetch-cli/fastfetch/releases/download/2.18.1/fastfetch-linux-amd64.deb
-            sudo dpkg -i fastfetch-linux-amd64.deb
-
+            
         # Removes - (Firefox) 
             sudo nala purge firefox -y
 
