@@ -15,7 +15,7 @@
         sudo apt install nala -y
         sudo nala fetch --auto --fetches 4 -y
         sudo nala upgrade -y
-        sudo nala install wget git gnupg lsb-release apt-transport-https ca-certificates -y
+        sudo nala install wget git curl gnupg lsb-release apt-transport-https ca-certificates -y
 
     # Additional Repositories Added
 
@@ -42,8 +42,8 @@
     # Installing Apps 
         sudo nala upgrade -y
 
-        # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, Curl, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg) 
-            sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger adb curl podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 adb bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev signal-desktop -y
+        # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg) 
+            sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 adb bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev signal-desktop -y
             
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop, Flatseal) 
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
