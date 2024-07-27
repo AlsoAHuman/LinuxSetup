@@ -81,6 +81,7 @@
             git clone https://github.com/Genymobile/scrcpy
             cd scrcpy
             ./install_release.sh
+            cd
             cd My-Linux-Setup
             sudo bash Librewolf.bash
 
