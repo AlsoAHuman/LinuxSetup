@@ -5,18 +5,7 @@
           echo "You must be a root user to run this script, please run sudo bash setup.bash" 2>&1
           exit 1
         fi
-
-    # Discord Install Function
-        install_discord() {
-        echo "Installing Discord..."
-        wget -O discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-        sudo dpkg -i discord.deb
-        rm discord.deb
-        }
-
-    # Ask User If They Want to Install Discord
-        read -p "Do you want to install Discord? (y/n): " response
-    
+  
     # Variables - (Username, Directory)
         username=$(id -u -n 1000)
         builddir=$(pwd)
@@ -57,11 +46,6 @@
     # Installing Apps 
         sudo nala upgrade -y
 
-        # Installing Discord (if user chose yes)
-            if [[ $response =~ ^([yY][eE][sS]|[yY])$ ]]; then
-                install_discord
-            fi
-        
         # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg) 
             # Native Section
                 sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
