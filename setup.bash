@@ -62,12 +62,12 @@
             flatpak install flathub com.github.tchx84.Flatseal -y
 
         # Via Git Clone - (Scrcpy, Librewolf)
+            sudo bash Librewolf.bash
             git clone https://github.com/Genymobile/scrcpy
             cd scrcpy
             ./install_release.sh
             cd
             cd My-Linux-Setup
-            sudo bash Librewolf.bash
 
         # Via Curl - (Bun, Rust, Ollama, Fastfetch)
             curl -fsSL https://bun.sh/install | bash
