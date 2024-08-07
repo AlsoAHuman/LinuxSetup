@@ -19,3 +19,4 @@
         alias weather='curl wttr.in/$Location'
         alias aliases='nano ~/.bash_aliases'
         alias neofetch='fastfetch'
+        alias rootphone='adb shell sh /storage/emulated/0/Android/data/moe.shizuku.privileged.api/start.sh'
