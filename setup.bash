@@ -19,9 +19,9 @@
 
     # Additional Repositories Added
 
-        # Steam Repo
-            sudo deb http://deb.debian.org/debian/ bookworm main contrib non-free
-            sudo dpkg --add-architecture i386
+        # Lutris Repo
+            echo "deb [signed-by=/etc/apt/keyrings/lutris.gpg] https://download.opensuse.org/repositories/home:/strycore/Debian_12/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list > /dev/null
+            wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg > /dev/null
         
         # Protonvpn Repo
             wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
@@ -48,10 +48,10 @@
 
         # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg) 
             # Native Section
-                sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev -y
+                sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev lutris -y
 
             # Added Repositories Section
-                sudo nala install steam-installer signal-desktop -y
+                sudo nala install signal-desktop -y
             
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop, Flatseal) 
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
