@@ -9,7 +9,7 @@
             curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
       
           # Install the downloaded deb file using apt-get
-            sudo apt-get install /tmp/fastfetch_latest_amd64.deb
+            sudo nala install /tmp/fastfetch_latest_amd64.deb
       else
           # If Debian version is 13 or higher, use nala to install fastfetch
             sudo nala install fastfetch
