@@ -27,9 +27,6 @@
             wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
             sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
 
-        # Fastfetch Repo
-            FASTFETCH_URL=$(curl -s https://api.github.com/repos/fastfetch-cli/fastfetch/releases/latest | grep "browser_download_url.*linux-amd64.deb" | cut -d '"' -f 4)
-        
         # Signal Desktop Repo
             wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
             cat signal-desktop-keyring.gpg | sudo tee /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
@@ -72,8 +69,6 @@
         # Via Curl - (Bun, Rust, Fastfetch)
             curl -fsSL https://bun.sh/install | bash
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-            curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
-            sudo nala install /tmp/fastfetch_latest_amd64.deb
             
         # Via W-get - (Superfile)
             bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
@@ -83,6 +78,7 @@
 
     # Scripts Setup
         sudo bash Scripts_List/usenala.bash
+        sudo bash Scripts_List/Fastfetch.bash
         sudo bash Scripts_List/AutoUpdate.bash
 
     # Clean Up
