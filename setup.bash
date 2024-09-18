@@ -23,10 +23,6 @@
             sudo deb http://deb.debian.org/debian/ bookworm main contrib non-free
             sudo dpkg --add-architecture i386
         
-        # Lutris Repo
-            echo "deb [signed-by=/etc/apt/keyrings/lutris.gpg] https://download.opensuse.org/repositories/home:/strycore/Debian_12/ ./" | sudo tee /etc/apt/sources.list.d/lutris.list > /dev/null
-            wget -q -O- https://download.opensuse.org/repositories/home:/strycore/Debian_12/Release.key | gpg --dearmor | sudo tee /etc/apt/keyrings/lutris.gpg > /dev/null
-        
         # Protonvpn Repo
             wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
             sudo dpkg -i ./protonvpn-stable-release_1.0.3-3_all.deb
@@ -52,7 +48,7 @@
 
         # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg, preload) 
             # Native Section
-                sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev lutris preload python3.11-venv -y
+                sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
 
             # Added Repositories Section
                 sudo nala install signal-desktop steam-installer -y
@@ -73,12 +69,11 @@
             cd
             cd My-Linux-Setup
 
-        # Via Curl - (Bun, Rust, Ollama, Fastfetch)
+        # Via Curl - (Bun, Rust, Fastfetch)
             curl -fsSL https://bun.sh/install | bash
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
-            curl -fsSL https://ollama.com/install.sh | sh
             curl -sL $FASTFETCH_URL -o /tmp/fastfetch_latest_amd64.deb
-            sudo apt-get install /tmp/fastfetch_latest_amd64.deb
+            sudo nala install /tmp/fastfetch_latest_amd64.deb
             
         # Via W-get - (Superfile)
             bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
