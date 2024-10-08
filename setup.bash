@@ -19,7 +19,7 @@
 
     # Additional Repositories Added
 
-         # Steam Repo
+         # LibreWolf Repo
              sudo nala install extrepo -y
              sudo extrepo enable librewolf
 
