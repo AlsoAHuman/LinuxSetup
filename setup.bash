@@ -19,11 +19,11 @@
 
     # Additional Repositories Added
 
-         # LibreWolf Repo
-             sudo nala install extrepo -y
-             sudo extrepo enable librewolf
+        # LibreWolf Repo
+            sudo nala install extrepo -y
+            sudo extrepo enable librewolf
 
-         # Steam Repo
+        # Steam Repo
             sudo deb http://deb.debian.org/debian/ bookworm main contrib non-free
             sudo dpkg --add-architecture i386
         
