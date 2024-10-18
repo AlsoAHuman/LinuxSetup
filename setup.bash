@@ -22,10 +22,6 @@
         # LibreWolf Repo
             sudo nala install extrepo -y
             sudo extrepo enable librewolf
-
-        # Steam Repo
-            sudo deb http://deb.debian.org/debian/ bookworm main contrib non-free
-            sudo dpkg --add-architecture i386
         
         # Protonvpn Repo
             wget https://repo2.protonvpn.com/debian/dists/stable/main/binary-all/protonvpn-stable-release_1.0.3-3_all.deb
@@ -52,7 +48,7 @@
                 sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
 
             # Added Repositories Section
-                sudo nala install librewolf signal-desktop steam-installer -y
+                sudo nala install librewolf signal-desktop -y
             
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop, Flatseal) 
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -69,7 +65,7 @@
             cd
             cd My-Linux-Setup
 
-        # Via Curl - (Bun, Rust, Fastfetch)
+        # Via Curl - (Bun, Rust)
             curl -fsSL https://bun.sh/install | bash
             curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
             
