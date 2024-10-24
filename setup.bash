@@ -111,6 +111,7 @@
             
         # Removes - (Firefox) 
             sudo nala purge firefox -y
+            rm -f ./protonvpn-stable-release_1.0.3-3_all.deb
 
     # Scripts Setup
         sudo bash Scripts_List/usenala.bash
