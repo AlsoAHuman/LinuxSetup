@@ -9,7 +9,33 @@
     # Variables - (Username, Directory)
         username=$(id -u -n 1000)
         builddir=$(pwd)
-        
+        architecture
+    # Installation Prompts
+
+        #Steam Prompt
+            # Prompt for Steam Installation
+                echo "Do you want to install the Steam Launcher (yes/no): "
+                steam_install_option=("yes" "no" "y" "n")
+                
+            # Function to prompt for Steam Installation
+                select steamlauncher in "${steam_install_option[@]}"; do
+                    case $steamlauncher in
+                        yes|y)
+                            steam_install="y"
+                echo “Steam Launcher Will Be Installed”
+                            break
+                            ;;
+                        no|n)
+                            steam_install="n"
+                	echo “Steam Launcher Will Not Be Installed”
+                            break
+                            ;;
+                        *)
+                            echo "Invalid input. Please enter 'yes', 'y', 'no', or 'n'."
+                            ;;
+                    esac
+                done
+            
     # Adding Nala and Items Needed For Adding Repositories
         sudo apt update
         sudo apt install nala -y
@@ -45,7 +71,7 @@
 
         # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg, preload) 
             # Native Section
-                sudo nala install blender mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386 vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
+                sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
 
             # Added Repositories Section
                 sudo nala install librewolf signal-desktop -y
@@ -58,6 +84,17 @@
             flatpak install flathub io.podman_desktop.PodmanDesktop -y
             flatpak install flathub com.github.tchx84.Flatseal -y
 
+        #Via User Prompt - (Steam Launcher)
+            # Install the Steam Launcher
+                if [[ $steam_install = "y" ]]; then
+                    # Install the Steam package
+                        cp /etc/apt/sources.list /etc/apt/sources.list.bak
+                        sed -i '/^deb http:\/\/deb.debian.org\/debian\/ bookworm main/s/$/ contrib non-free/' /etc/apt/sources.list
+                        dpkg --add-architecture i386
+                        nala update
+                        nala install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386
+                fi
+        
         # Via Git Clone - (Scrcpy)
             git clone https://github.com/Genymobile/scrcpy
             cd scrcpy
