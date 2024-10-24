@@ -118,7 +118,16 @@
         sudo bash Scripts_List/AutoUpdate.bash
 
     # Clean Up
-        cd
-        clear
-        echo "This program has installed nala, a custom media suite, librewolf, bun, rust, and some command line goodies."
-        echo "To see a full list of changes, run the command bash fullLS.bash"
+        # Define the base sentences
+            a="This program has installed nala,"
+            b="media suite, librewolf, bun, rust, and some command line goodies."
+            c=""
+        
+        # Check if Steam was installed
+            if [[ $steam_install == "y" ]]; then
+                c+=" steam launcher, "
+            fi
+            
+            # Print the final message
+            echo "$a$c$b"
+            echo "To see a full list of changes, run the command bash fullLS.bash"
