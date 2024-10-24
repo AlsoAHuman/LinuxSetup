@@ -128,6 +128,6 @@
                 SteamInfo+=" steam launcher, "
             fi
             
-            # Print the final message
+        # Print the final message
             echo "$StartingBase$SteamInfo$EndingBase"
             echo "To see a full list of changes, run the command bash fullLS.bash"
