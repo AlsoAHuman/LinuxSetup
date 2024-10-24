@@ -9,7 +9,7 @@
     # Variables - (Username, Directory)
         username=$(id -u -n 1000)
         builddir=$(pwd)
-        architecture
+        
     # Installation Prompts
 
         #Steam Prompt
