@@ -119,15 +119,15 @@
 
     # Clean Up
         # Define the base sentences
-            a="This program has installed nala,"
-            b="media suite, librewolf, bun, rust, and some command line goodies."
-            c=""
+            StartingBase="This program has installed nala,"
+            EndingBase="media suite, librewolf, bun, rust, and some command line goodies."
+            SteamInfo=""
         
         # Check if Steam was installed
             if [[ $steam_install == "y" ]]; then
-                c+=" steam launcher, "
+                SteamInfo+=" steam launcher, "
             fi
             
             # Print the final message
-            echo "$a$c$b"
+            echo "$StartingBase$SteamInfo$EndingBase"
             echo "To see a full list of changes, run the command bash fullLS.bash"
