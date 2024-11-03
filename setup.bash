@@ -80,7 +80,7 @@
             flatpak install flathub io.podman_desktop.PodmanDesktop -y
             flatpak install flathub com.github.tchx84.Flatseal -y
 
-        #Via User Prompt - (Steam Launcher)
+        # Via User Prompt - (Steam Launcher)
             # Install the Steam Launcher
                 if [[ $steam_install = "y" ]]; then
                     # Install the Steam package
@@ -117,7 +117,7 @@
     # Clean Up
         clear
         
-        #Final Message
+        # Final Message
             # Define The Base Sentences
                 StartingBase="This program has installed nala,"
                 EndingBase="media suite, librewolf, bun, rust, and some command line goodies."
