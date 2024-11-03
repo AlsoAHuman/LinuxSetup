@@ -6,11 +6,7 @@
           exit 1
         fi
   
-    # Variables - (Username, Directory)
-        username=$(id -u -n 1000)
-        builddir=$(pwd)
-        
-    # Installation Prompts
+   # Installation Prompts
 
         #Steam Prompt
             # Prompt for Steam Installation
