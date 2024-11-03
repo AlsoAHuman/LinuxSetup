@@ -9,11 +9,11 @@
     # Installation Prompts
 
         #Steam Prompt
-            # Prompt for Steam Installation
+            # Echo
                 echo "Do you want to install the Steam Launcher (yes/no): "
                 read -r steamlauncher
-                
-            # Function to prompt for Steam Installation
+            
+            # Steam Prompt Logic
                 case $steamlauncher in
                     yes|y)
                         steam_install="y"
