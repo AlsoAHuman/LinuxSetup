@@ -22,12 +22,12 @@
                     case ${steamlauncher,,} in
                         yes|y)
                             steam_install="y"
-                    echo “Steam Launcher Will Be Installed”
+                    echo "Steam Launcher Will Be Installed"
                             break
                             ;;
                         no|n)
                             steam_install="n"
-                	echo “Steam Launcher Will Not Be Installed”
+                	echo "Steam Launcher Will Not Be Installed"
                             break
                             ;;
                         *)
