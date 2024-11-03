@@ -19,7 +19,7 @@
                 
             # Function to prompt for Steam Installation
                 select steamlauncher in "${steam_install_option[@]}"; do
-                    case ${steamlauncher,,} in
+                    case ${steamlauncher} in
                         yes|y)
                             steam_install="y"
                     echo “Steam Launcher Will Be Installed”
