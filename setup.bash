@@ -6,31 +6,31 @@
           exit 1
         fi
   
-   # Installation Prompts
+    # Installation Prompts
 
-        #Steam Prompt
-            # Prompt for Steam Installation
-                echo "Do you want to install the Steam Launcher (yes/no): "
-                steam_install_option=("yes" "no" "y" "n")
-                
-            # Function to prompt for Steam Installation
-                select steamlauncher in "${steam_install_option[@]}"; do
-                    case $steamlauncher in
-                        yes|y)
-                            steam_install="y"
-                    echo "Steam Launcher Will Be Installed"
-                            break
-                            ;;
-                        no|n)
-                            steam_install="n"
-                	echo "Steam Launcher Will Not Be Installed"
-                            break
-                            ;;
-                        *)
-                            echo "Invalid input. Please enter 'yes', 'y', 'no', or 'n'."
-                            ;;
-                    esac
-                done
+            #Steam Prompt
+                # Prompt for Steam Installation
+                    echo "Do you want to install the Steam Launcher (yes/no): "
+                    steam_install_option=("yes" "no" "y" "n")
+                    
+                # Function to prompt for Steam Installation
+                    select steamlauncher in "${steam_install_option[@]}"; do
+                        case $steamlauncher in
+                            yes|y)
+                                steam_install="y"
+                        echo "Steam Launcher Will Be Installed"
+                                break
+                                ;;
+                            no|n)
+                                steam_install="n"
+                        echo "Steam Launcher Will Not Be Installed"
+                                break
+                                ;;
+                            *)
+                                echo "Invalid input. Please enter 'yes', 'y', 'no', or 'n'."
+                                ;;
+                        esac
+                    done
             
     # Adding Nala and Items Needed For Adding Repositories
         sudo apt update
