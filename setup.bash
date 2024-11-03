@@ -18,12 +18,10 @@
                     yes|y)
                         steam_install="y"
                         echo "Steam Launcher Will Be Installed"
-                        break
                         ;;
                     no|n)
                         steam_install="n"
                         echo "Steam Launcher Will Not Be Installed"
-                        break
                         ;;
                     *)
                         echo "Invalid input. Please enter 'yes', 'y', 'no', or 'n'."
