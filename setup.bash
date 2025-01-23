@@ -61,9 +61,9 @@
     # Installing Apps 
         sudo nala upgrade -y
 
-        # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, Ranger, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg, preload) 
+        # Via Nala - (Blender, VLC, Flatpak, Signal, Keepassxc, Proton VPN, ADB, VSCodium, Podman, Libreoffice, Kdenlive, ffempeg, preload) 
             # Native Section
-                sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak neovim keepassxc ranger fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
+                sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak keepassxc fzf adb podman libreoffice kdenlive ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
 
             # Added Repositories Section
                 sudo nala install librewolf signal-desktop -y
