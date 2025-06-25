@@ -51,14 +51,6 @@
             echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | \
             sudo tee /etc/apt/sources.list.d/signal-xenial.list
         
-        # Vscodium Repo
-            wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-                | gpg --dearmor \
-                | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
-            echo 'deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg] https://download.vscodium.com/debs vscodium main' \
-                | sudo tee /etc/apt/sources.list.d/vscodium.list
-
-
     # Installing Apps 
         sudo nala upgrade -y
 
@@ -67,7 +59,7 @@
                 sudo nala install blender vlc htop flatpak plasma-discover-backend-flatpak keepassxc fzf adb podman libreoffice ffmpeg libsdl2-2.0-0 bat gcc pkg-config meson ninja-build libsdl2-dev libavcodec-dev libavdevice-dev libavformat-dev libavutil-dev libswresample-dev libusb-1.0-0 libusb-1.0-0-dev preload python3.11-venv -y
 
             # Added Repositories Section
-                sudo nala install librewolf signal-desktop proton-vpn-gnome-desktop codium -y
+                sudo nala install librewolf signal-desktop proton-vpn-gnome-desktop -y
             
         # Via Flatpak - (Freetube, Bottles, GIMP, Podman Desktop, Flatseal) 
             flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
@@ -76,6 +68,7 @@
             flatpak install flathub org.gimp.GIMP -y
             flatpak install flathub io.podman_desktop.PodmanDesktop -y
             flatpak install flathub com.github.tchx84.Flatseal -y
+            flatpak install flathub dev.lapce.lapce -y
 
         # Via User Prompt - (Steam Launcher)
             # Install the Steam Launcher
