@@ -11,12 +11,11 @@
         sudo apt install nala -y
         sudo nala fetch --https-only --auto --fetches 4 -y
         sudo nala upgrade -y
-        sudo nala install wget git curl gnupg lsb-release apt-transport-https ca-certificates -y
+        sudo nala install wget git curl gnupg lsb-release apt-transport-https ca-certificates extrepo -y
 
     # Additional Repositories Added
 
         # LibreWolf Repo
-            sudo nala install extrepo -y
             sudo extrepo enable librewolf
         
         # Protonvpn Repo
