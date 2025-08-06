@@ -87,16 +87,4 @@
         clear
         
         # Final Message
-            # Define The Base Sentences
-                StartingBase="This program has installed nala,"
-                EndingBase="media suite, librewolf, bun, rust, and some command line goodies."
-                SteamInfo=""
-            
-            # Check If Steam Was Installed
-                if [[ $steam_install == "y" ]]; then
-                    SteamInfo+=" steam launcher, "
-                fi
-                
-            # Print the Final Message
-                echo "$StartingBase$SteamInfo$EndingBase"
-                echo "To see a full list of changes, run the command bash My-Linux-Setup/fullLS.bash"
+            echo "Enjoy :3"
