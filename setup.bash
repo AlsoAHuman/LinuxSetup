@@ -6,28 +6,6 @@
           exit 1
         fi
   
-    # Installation Prompts
-
-        #Steam Prompt
-            # Echo
-                echo "Do you want to install the Steam Launcher (yes/no): "
-                read -r steamlauncher
-            
-            # Steam Prompt Logic
-                case $steamlauncher in
-                    yes|y)
-                        steam_install="y"
-                        echo "Steam Launcher Will Be Installed"
-                        ;;
-                    no|n)
-                        steam_install="n"
-                        echo "Steam Launcher Will Not Be Installed"
-                        ;;
-                    *)
-                        echo "Invalid input. Please enter 'yes', 'y', 'no', or 'n'."
-                        ;;
-                esac
-            
     # Adding Nala and Items Needed For Adding Repositories
         sudo apt update
         sudo apt install nala -y
@@ -69,27 +47,17 @@
             flatpak install flathub io.podman_desktop.PodmanDesktop -y
             flatpak install flathub com.github.tchx84.Flatseal -y
             flatpak install flathub dev.lapce.lapce -y
-
-        # Via User Prompt - (Steam Launcher)
-            # Install the Steam Launcher
-                if [[ $steam_install = "y" ]]; then
-                    # Install the Steam package
-                        cp /etc/apt/sources.list /etc/apt/sources.list.bak
-                        sed -i '/^deb http:\/\/deb.debian.org\/debian\/ bookworm main/s/$/ contrib non-free/' /etc/apt/sources.list
-                        dpkg --add-architecture i386
-                        nala update
-                        nala install -y steam-installer mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386
-                fi
         
         # Via Git Clone - (Scrcpy)
+            pushd .
+            cd ~
             git clone https://github.com/Genymobile/scrcpy
             cd scrcpy
             ./install_release.sh
-            cd
-            cd My-Linux-Setup
-
-        # Via W-get - (Superfile)
-            bash -c "$(wget -qO- https://superfile.netlify.app/install.sh)"
+            popd
+            
+        # Via Curl
+            bash <(curl -s https://raw.githubusercontent.com/kamiyaa/joshuto/master/utils/install.sh)
 
     # Removes - (Firefox) 
         sudo nala purge firefox -y
